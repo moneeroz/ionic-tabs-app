@@ -24,7 +24,7 @@
     </ion-fab-button>
   </ion-fab>
 
-  <!-- Ion input -->
+  <!-- Ion inputs -->
   <ion-list>
     <ion-item>
       <ion-input
@@ -63,11 +63,50 @@
     </ion-item>
 
     <ion-item>
+      <!-- Ion textarea -->
       <ion-textarea
         label="description"
         placeholder="Type your description here"
         labelPlacement="floating"
       ></ion-textarea>
+    </ion-item>
+
+    <!-- Ion single select -->
+    <ion-item>
+      <ion-select aria-label="fruit" placeholder="Select fruit">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Ion multiple select -->
+    <ion-item>
+      <ion-select
+        aria-label="Fruit"
+        placeholder="Select all fruits that apply"
+        [multiple]="true"
+      >
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Ion checkbox -->
+    <ion-item>
+      <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
+    </ion-item>
+
+    <!-- Ion radio group -->
+    <!-- default value is strawberries in this case -->
+    <ion-item>
+      <ion-radio-group value="strawberries">
+        <ion-radio value="grapes">Grapes</ion-radio><br />
+        <ion-radio value="strawberries">Strawberries</ion-radio><br />
+        <ion-radio value="pineapple">Pineapple</ion-radio><br />
+        <ion-radio value="cherries">Cherries</ion-radio>
+      </ion-radio-group>
     </ion-item>
   </ion-list>
 </ion-content>
