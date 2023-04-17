@@ -55,4 +55,15 @@
       <ion-label>Full Lines</ion-label>
     </ion-item>
   </ion-list>
+
+  <!-- Ion Alert -->
+  <!-- id and trigger has to match -->
+  <ion-button id="confirm-box">Click Me</ion-button>
+  <ion-alert
+    trigger="confirm-box"
+    header="Success"
+    subHeader="Important message"
+    message="Task Failed Successfully!"
+    [buttons]="alertButtons"
+  ></ion-alert>
 </ion-content>
