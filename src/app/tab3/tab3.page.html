@@ -5,11 +5,49 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Contact Us</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Ion Grid -->
+  <ion-grid>
+    <ion-row>
+      <ion-col><ion-item color="primary">1</ion-item></ion-col>
+      <ion-col><ion-item color="success">2</ion-item></ion-col>
+      <ion-col><ion-item color="danger">3</ion-item></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Ion Grid column size -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2"><ion-item color="primary">1</ion-item></ion-col>
+      <ion-col size="7"><ion-item color="success">2</ion-item></ion-col>
+      <ion-col size="3"><ion-item color="danger">3</ion-item></ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- Ion Grid column size for specific size-->
+  <!-- in this ex anyting larger than small will take the sizeSm value-->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" sizeSm="4"
+        ><ion-item color="primary">1</ion-item></ion-col
+      >
+      <ion-col size="7" sizeSm="4"
+        ><ion-item color="success">2</ion-item></ion-col
+      >
+      <ion-col size="3" sizeSm="12"
+        ><ion-item color="danger">3</ion-item></ion-col
+      >
+    </ion-row>
+  </ion-grid>
 
-  <app-explore-container name="Contact Us page"></app-explore-container>
+  <!-- Ion Grid offset -->
+  <!-- offset + size = 12 -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" offset="2"
+        ><ion-item color="primary">1</ion-item></ion-col
+      >
+      <ion-col size="3" offset="2"
+        ><ion-item color="success">2</ion-item></ion-col
+      >
+      <ion-col size="3"><ion-item color="danger">3</ion-item></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
