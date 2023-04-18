@@ -13,6 +13,8 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
 export class Tab2Page {
   // public alertButtons = ['YES', 'NO'];
 
+  isAlertOpen = false;
+
   // Customise button action
   public alertButtons = [
     {
@@ -49,5 +51,9 @@ export class Tab2Page {
     });
 
     await alert.present();
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
   }
 }

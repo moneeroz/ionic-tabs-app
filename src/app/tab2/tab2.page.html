@@ -69,4 +69,15 @@
 
   <!-- controller alerts -->
   <ion-button (click)="presentAlert()">Click Me Again</ion-button>
+
+  <!-- is Open -->
+  <ion-button (click)="setOpen(true)">using isOpen properity</ion-button>
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    header="Alert"
+    subHeader="Important message"
+    message="This is an alert!"
+    [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"
+  ></ion-alert>
 </ion-content>
