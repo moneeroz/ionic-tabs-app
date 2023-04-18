@@ -80,4 +80,35 @@
     [buttons]="alertButtons"
     (didDismiss)="setOpen(false)"
   ></ion-alert>
+
+  <!-- Ion Toasts -->
+  <!-- id and trigger has to match -->
+  <ion-button id="open-toast" expand="block">Open Toast</ion-button>
+
+  <ion-toast
+    trigger="open-toast"
+    message="This toast will disappear after 3 seconds"
+    [duration]="3000"
+  ></ion-toast>
+
+  <!-- Controller Toasts -->
+  <ion-button expand="block" (click)="presentToast('top')"
+    >Present Toast At the Top</ion-button
+  >
+  <ion-button expand="block" (click)="presentToast('middle')"
+    >Present Toast At the Middle</ion-button
+  >
+  <ion-button expand="block" (click)="presentToast('bottom')"
+    >Present Toast At the Bottom</ion-button
+  >
+
+  <!-- customize position using the ts method -->
+  <ion-button id="open-toast1" expand="block">Open Toast</ion-button>
+
+  <ion-toast
+    trigger="open-toast1"
+    message="This toast will disappear after 3 seconds"
+    position="middle"
+    [duration]="3000"
+  ></ion-toast>
 </ion-content>

@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ToastController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
   standalone: true,
-  imports: [IonicModule, ExploreContainerComponent],
+  imports: [IonicModule],
 })
 export class Tab2Page {
   // public alertButtons = ['YES', 'NO'];
@@ -40,8 +39,12 @@ export class Tab2Page {
     },
   ];
 
-  constructor(private alertController: AlertController) {}
+  constructor(
+    private alertController: AlertController,
+    private toastController: ToastController,
+  ) {}
 
+  // Controller Alerts
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
@@ -53,7 +56,20 @@ export class Tab2Page {
     await alert.present();
   }
 
+  // isOpen
   setOpen(isOpen: boolean) {
     this.isAlertOpen = isOpen;
+  }
+
+  // Controller Toasts
+  // Type of position is limited to (top, middle, bottom) like an ENUM
+  async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Hello World!',
+      duration: 1500,
+      position: position,
+    });
+
+    await toast.present();
   }
 }
